@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
+import Country from './components/Country'
 import countryService from './services/getcountries'
 
 const App = () => {
@@ -10,7 +11,6 @@ const App = () => {
     e.preventDefault()
     console.log('searching')
     countryService.getCountries(country).then(res => {
-      console.log(res)
       setCountries(res)
     })
   }
@@ -24,11 +24,9 @@ const App = () => {
         <Button className='mt-3' type='submit'>Search</Button>
       </Form>
       <div>
-        <ul>
-          {countries.map(item => (
-            <li key={item.name.common}>{item.name.common}</li>
-          ))}
-        </ul>
+        {countries.map(item =>
+          <Country key={item.area} item={item}/>
+        )}
       </div>
     </div>
   )
