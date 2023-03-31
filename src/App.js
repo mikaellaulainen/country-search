@@ -10,7 +10,7 @@ const App = () => {
 
   const getResult = (e) => {
     e.preventDefault()
-    console.log('searching')
+    //Fetching data from REST Countries api, only rendering first 10.
     countryService.getCountries(country).then(res => {
       setCountries(res.slice(0,10))
     })
