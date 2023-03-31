@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Button, Card } from 'react-bootstrap'
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
 
 const Country = ({ item }) => {
   const [view,setView] = useState(false)

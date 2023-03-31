@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { Button, Form, Row } from 'react-bootstrap'
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
+import Row from 'react-bootstrap/Row'
 import Country from './components/Country'
 import Topnav from './components/Topnav'
 import countryService from './services/getcountries'
