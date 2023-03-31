@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = '/v3.1/name/'
+const baseUrl = 'https://restcountries.com/v3.1/name/'
 
 const getCountries = async country => {
   const res = await axios.get(`${baseUrl}${country}`)
