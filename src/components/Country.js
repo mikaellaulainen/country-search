@@ -1,15 +1,14 @@
 import { useState } from 'react'
-import { Card } from 'react-bootstrap'
+import { Button, Card } from 'react-bootstrap'
 
 const Country = ({ item }) => {
   const [view,setView] = useState(false)
-  console.log(item.area)
   return (
-    <Card className='col-11 col-sm-9 col-md-5 col-lg-3 col-xl-2 p-3 m-3'>
+    <Card className='col-11 col-sm-9 col-md-5 col-lg-3 col-xl-2 px-3 py-1 mx-3 mb-3'>
       <Card.Title>{item.name.common}</Card.Title>
-      <Card.Img className="card-img" src={item.flags.png}/>
+      <Card.Img className="border card-img" src={item.flags.png}/>
       <Card.Body>
-        <button onClick={() => setView(!view)}>More info</button>
+        <Button variant='dark' onClick={() => setView(!view)}>More info</Button>
         {view &&
         <div>
           <Card.Text>
